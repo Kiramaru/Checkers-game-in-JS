@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>"Съедобные шашки"</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Съедобные шашки</h1>
+        <p id="PlayerPlay"></p>
+        <div id="ManualFull">
+            <div id="Manual">
+                <p>Введите имя 1 игрока <input id='Name1' type="text" required></input></p>
+                <p>Загрузите фотографию шашки</p> <input id='checkers1' type="file" accept="image/png, image/jpeg">
+                <p>Введите имя 2 игрока <input id='Name2' type="text" required></p>
+                <p>Загрузите фотографию шашки</p> <input id='checkers2' type="file" accept="image/png, image/jpeg">
+                <p><button id="ButtonStart" onclick="Check()">Отправить</button></p>
+                <p id="CheckString" style="display: none;">Введите имена, эти поля обязательные</p>
+            </div>
+            <div id="Manual2" style="display: none;">
+                <button class="button111" id="InfaBd" v-on:click="addbd" onclick="Message1()">Отправить данные</button>
+                <p id="mess" style="display: none;">Следующим игрокам будут видны ваши достижения</p> 
+                <table  class="TableRairing">
+                    <tr v-for="arr in arr" style=" border: 3px solid #A0522D">
+                            <td style=" border: 3px solid #A0522D;">{{arr.Name}}</td>
+                            <td style=" border: 3px solid #A0522D;">{{arr.Score}}</td>
+                            <td style=" border: 3px solid #A0522D;">{{arr.Resalt}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p id="Timer" style="display: none;"></p>
+        <div id="Content" class="Content">
+            <table id="Place" class="Place">
+                
+            </table>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</html>

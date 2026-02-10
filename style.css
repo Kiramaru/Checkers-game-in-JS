@@ -1,0 +1,36 @@
+html{
+    background-color: #ffd6bd;
+    color: #552507;
+}
+.Place{
+    border: 20px solid #A0522D;
+    display: none;
+}
+body{
+    text-align: center;
+    justify-content: center;
+}
+.Content{
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 25px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    background-color: #f9e1d2;
+    color: #552507;
+    border-radius: 10px;
+    border-color: #A0522D;
+}
+.ManualFull{
+    display: flex;
+    justify-content: center;
+}
+.TableRairing{
+    margin: auto;
+    margin-top: 30px;
+    font-size: 25px;
+}
